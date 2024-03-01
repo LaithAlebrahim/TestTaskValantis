@@ -51,10 +51,10 @@ const ProductList = () => {
     };
 
     const handleFilter = ({ type, value }) => {
-        setOffset(0); // Always reset the offset when applying filters
+        setOffset(0);
         if (type==='All') {
             setFilters({});
-            fetchFilteredProducts() // Clear filters to ensure useEffect triggers fetchAllProducts
+            fetchAllProducts() // Clear filters to ensure useEffect triggers fetchAllProducts
         } else {
             const newFilters = {};
             if (type && value) {
